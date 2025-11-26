@@ -48,7 +48,7 @@
   "sap.ui5": {
     "flexEnabled": true,
     "resourceRoots": {
-      "mathbasics": "destinations/destlib/resources/mathbasics/"
+      "mathbasics": "destinations/destlib/src/csc/ui5lib/delegates/"
     },
     "dependencies": {
       "minUI5Version": "1.142.1",
