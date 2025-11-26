@@ -1,6 +1,6 @@
 _schema-version: 3.3.0
-ID: sapbtpcommon-cleanup
-version: 1.0.1
+ID: commonsapbtp
+version: 1.0.0
 description: "A simple CAP project."
 parameters:
   enable-parallel-deployments: true
@@ -11,7 +11,7 @@ build-parameters:
         - npm ci
         - npx cds build --production
 modules:
-  - name: sapbtpcommon-cleanup-srv
+  - name: commonsapbtp-srv
     type: nodejs
     path: gen/srv
     parameters:
@@ -25,7 +25,7 @@ modules:
           srv-url: ${default-url}
     requires:
       []
-  - name: sapbtpcommon-cleanup
+  - name: commonsapbtp
     type: approuter.nodejs
     path: app/router
     parameters:
