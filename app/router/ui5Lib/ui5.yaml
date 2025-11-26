@@ -1,0 +1,16 @@
+specVersion: '3.0'
+metadata:
+  name: 'csc.ui5lib'
+type: library
+framework:
+  name: SAPUI5
+  version: 1.120.0
+  libraries:
+    - name: sap.ui.core
+    - name: sap.ui.mdc
+    - name: sap.m
+builder:
+  resources:
+    excludes:
+      - "/test/"
+      - "/localService/"

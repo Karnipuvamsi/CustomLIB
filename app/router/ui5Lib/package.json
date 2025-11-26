@@ -1,0 +1,20 @@
+{
+    "name": "common-app-ui5lib",
+    "description": "CSC: common - app/ui5Lib module",
+    "version": "0.0.1",
+    "author": "Rakesh Jain (rakesh.jain@intertrustgroup.com)",
+    "license": "CSC",
+    "ui5": {
+        "dependencies": [
+            "sap.ui.core",
+            "sap.ui.mdc",
+            "sap.m"
+        ]
+    },
+    "scripts": {
+        "build:ui": "ui5 build --all"
+    },
+    "devDependencies": {
+        "@ui5/cli": "^4.0.16"
+    }
+}

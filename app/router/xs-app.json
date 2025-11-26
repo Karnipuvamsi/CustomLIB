@@ -1,0 +1,10 @@
+{
+  "welcomeFile": "/index.html",
+  "routes": [
+    {
+      "source": "^/(.*)$",
+      "localDir": "ui5Lib",
+      "authenticationType": "none"
+    }
+  ]
+}

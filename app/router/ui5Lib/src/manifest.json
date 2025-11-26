@@ -1,0 +1,35 @@
+{
+  "_version": "1.65.0",
+  "sap.app": {
+    "id": "csc.ui5lib",
+    "type": "library",
+    "i18n": "i18n/i18n.properties",
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "applicationVersion": {
+      "version": "1.0.0"
+    }
+  },
+  "sap.ui5": {
+    "dependencies": {
+      "minUI5Version": "1.136.2",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.ui.mdc": {},
+        "sap.m": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "library": {
+      "i18n": "i18n/i18n.properties",
+      "css": false
+    }
+  },
+  "sap.cloud": {
+    "public": true,
+    "service": "csc.ui5lib"
+  }
+}
