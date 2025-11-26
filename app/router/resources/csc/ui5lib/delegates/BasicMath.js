@@ -1,2 +1,0 @@
-sap.ui.define([],function(){"use strict";const n={add:function(n,t){return n+t},subtract:function(n,t){return n-t},multiply:function(n,t){return n*t},divide:function(n,t){if(t===0){throw new Error("Division by zero is not allowed.")}return n/t}};return n});
-//# sourceMappingURL=BasicMath.js.map
