@@ -3,8 +3,8 @@
   "authenticationMethod": "route",
   "routes": [
     {
-      "source": "^/destinations/destlib/(.*)$",
-      "destination": "destlib",
+      "source": "^/destinations/destlibcleanup/(.*)$",
+      "destination": "destlibcleanup",
       "target": "/$1",
       "authenticationType": "none",
       "csrfProtection": false
