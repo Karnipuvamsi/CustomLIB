@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "A simple CAP project.",
   "dependencies": {
+    "@cap-js-community/odata-v2-adapter": "^1.15.7",
     "@sap/cds": "^9",
     "@sap/xssec": "^4.11.2",
-    "express": "^4"
+    "express": "^4.21.2"
   },
   "devDependencies": {
     "@cap-js/sqlite": "^2",
@@ -27,7 +28,8 @@
   ],
   "cds": {
     "requires": {
-      "auth": "mocked"
+      "auth": "mocked",
+      "destinations": true
     }
   }
 }

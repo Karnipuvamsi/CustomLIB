@@ -1,5 +1,5 @@
 _schema-version: 3.3.0
-ID: sapbtpcommon-cleanup
+ID: servicedest
 version: 1.0.1
 description: "A simple CAP project."
 parameters:
@@ -11,7 +11,7 @@ build-parameters:
         - npm ci
         - npx cds build --production
 modules:
-  - name: sapbtpcommon-cleanup-srv
+  - name: servicedest-srv
     type: nodejs
     path: gen/srv
     parameters:
@@ -24,8 +24,8 @@ modules:
         properties:
           srv-url: ${default-url}
     requires:
-      []
-  - name: sapbtpcommon-cleanup
+      - name: servicedest-destination
+  - name: servicedest
     type: approuter.nodejs
     path: app/router
     parameters:
@@ -39,11 +39,30 @@ modules:
           name: srv-api # must be used in xs-app.json as well
           url: ~{srv-url}
           forwardAuthToken: true
+      - name: servicedest-destination
     provides:
       - name: app-api
         properties:
           app-protocol: ${protocol}
           app-uri: ${default-uri}
 
+
+
 resources:
-  []
+  - name: servicedest-destination
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: destination
+      service-plan: lite
+      config:
+        HTML5Runtime_enabled: true
+        init_data:
+          instance:
+            destinations:
+              - Name: ui5
+                Type: HTTP
+                ProxyType: Internet
+                Authentication: NoAuthentication
+                URL: https://ui5.sap.com
+            existing_destinations_policy: update
+        version: 1.0.0
