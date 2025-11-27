@@ -3,9 +3,9 @@
   "authenticationMethod": "route",
   "routes": [
     {
-      "source": "^/destinations/destlibcleanup/(.*)$",
-      "destination": "destlibcleanup",
+      "source": "^/extlib/(.*)$",
       "target": "/$1",
+      "destination": "APP_ROUTER",
       "authenticationType": "none",
       "csrfProtection": false
     },
